@@ -1,0 +1,13 @@
+@mixin createFlex($type: flex, $along: center, $cross: center, $wrap: null) {
+  display: $type;
+  justify-content: $along;
+  align-items: $cross;
+  flex-wrap: $wrap;
+}
+
+@mixin createFont($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}

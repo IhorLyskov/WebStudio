@@ -1,0 +1,17 @@
+body {
+  font-family: 'Roboto', Tahoma, sans-serif;
+  /* Основной цвет - цвет абзацев */
+  color: $main-color;
+  /* Основной фон страницы */
+  background-color: $main-bg-color;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}

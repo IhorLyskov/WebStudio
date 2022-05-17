@@ -1,0 +1,24 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 0 auto;
+  text-align: center;
+
+  background-color: $dark-bg-color;
+  background-image: linear-gradient($hero-bg-color, $hero-bg-color), url(../images/hero-bg.jpg);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @include createFont(900, 44px, 1.36, 0.06em);
+    text-transform: uppercase;
+
+    color: $hero-title-color;
+  }
+}

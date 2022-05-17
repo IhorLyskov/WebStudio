@@ -1,0 +1,40 @@
+.feature {
+  @extend %list;
+
+  @include createFlex(flex, null, null, wrap);
+
+  &__item {
+    width: 270px;
+  }
+
+  &__item + &__item {
+    margin-left: 30px;
+  }
+
+  &__title {
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+    @include createFont(null, 16px, 1.14, 0.03em);
+
+    text-transform: uppercase;
+    color: $title-color;
+  }
+
+  &__text {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include createFont(null, 14px, 1.71, 0.03em);
+  }
+
+  &__ico {
+    background-color: $team-bg-color;
+    border-radius: 4px;
+    height: 120px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+
+    @include createFlex();
+  }
+}

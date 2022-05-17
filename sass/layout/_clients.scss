@@ -1,0 +1,26 @@
+.clients {
+  @extend %list;
+
+  @include createFlex();
+
+  &__link {
+    transition: border $time $function, fill $time $function;
+
+    display: block;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $logo-color;
+    border-radius: 4px;
+    padding: 16px 32px;
+    fill: $logo-color;
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+      fill: $accent-color;
+    }
+  }
+
+  &__item + &__item {
+    margin-left: 30px;
+  }
+}
