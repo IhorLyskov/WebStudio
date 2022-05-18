@@ -1,22 +1,35 @@
 .feature {
   @extend %list;
 
-  @include createFlex(flex, null, null, wrap);
+  margin-bottom: -30px;
 
-  &__item {
-    width: 270px;
+  @include tablet {
+    margin-left: -30px;
+    @include createFlex(flex, null, null, wrap);
   }
 
-  &__item + &__item {
-    margin-left: 30px;
+  &__item {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include tablet {
+      width: calc((100% / 2) - 30px);
+      margin-left: 30px;
+    }
+
+    @include desktop {
+      width: calc((100% / 4) - 30px);
+    }
   }
 
   &__title {
     margin-top: 0px;
     margin-bottom: 10px;
 
-    @include createFont(null, 16px, 1.14, 0.03em);
+    @include createFont(null, 14px, 1.14, 0.03em);
+    // @include createFont(null, 16px, 1.14, 0.03em);
 
+    text-align: center;
     text-transform: uppercase;
     color: $title-color;
   }
@@ -36,5 +49,10 @@
     margin-bottom: 30px;
 
     @include createFlex();
+  }
+}
+.section--feature {
+  @include tablet-max {
+    padding-bottom: 60px;
   }
 }

@@ -1,7 +1,7 @@
 .projects {
   @extend %list;
 
-  @include createFlex(flex, null, null, wrap);
+  // @include createFlex(flex, null, null, wrap);
 
   margin-bottom: 94px;
 

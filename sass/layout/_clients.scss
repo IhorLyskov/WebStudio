@@ -1,26 +1,37 @@
 .clients {
   @extend %list;
 
-  @include createFlex();
+  @include createFlex(flex, center, center, wrap);
+  margin-bottom: -30px;
+  margin-left: -30px;
+
+  &__item {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    width: calc((100% / 2) - 30px);
+
+    @include tablet {
+      width: calc((100% / 3) - 30px);
+    }
+
+    @include desktop {
+      width: calc((100% / 6) - 30px);
+    }
+  }
 
   &__link {
     transition: border $time $function, fill $time $function;
 
-    display: block;
-    width: 170px;
     height: 92px;
     border: 1px solid $logo-color;
     border-radius: 4px;
-    padding: 16px 32px;
+    @include createFlex();
+    // padding: 16px 32px;
     fill: $logo-color;
     &:hover,
     &:focus {
       border: 1px solid $accent-color;
       fill: $accent-color;
     }
-  }
-
-  &__item + &__item {
-    margin-left: 30px;
   }
 }
