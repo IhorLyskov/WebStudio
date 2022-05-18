@@ -73,7 +73,7 @@ img {
     max-width: 768px;
   }
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
   }
@@ -94,7 +94,7 @@ img {
 .section--padding-bottom {
   padding-bottom: 60px;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1200px) {
   .section {
     padding-top: 94px;
   }
