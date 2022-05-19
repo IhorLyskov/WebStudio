@@ -1,7 +1,13 @@
+.section--work {
+  @include tablet-max {
+    display: none;
+  }
+}
+
 .work {
   @extend %list;
 
-  // @include createFlex(flex, null, null, wrap);
+  @include createFlex(flex, null, null, wrap);
 
   &__item {
     width: 370px;

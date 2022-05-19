@@ -6,11 +6,11 @@
   background-color: $dark-bg-color;
 
   &__data {
-    @include createFlex(flex, space-between, null);
+    // @include createFlex(flex, space-between, null);
   }
 
   &__left-middle {
-    @include createFlex(flex, null, null);
+    // @include createFlex(flex, null, null);
   }
 
   &__left {
@@ -69,7 +69,7 @@
 }
 
 .mailing-form {
-  @include createFlex($cross: flex-start);
+  // @include createFlex($cross: flex-start);
 
   &__input {
     width: 358px;
@@ -89,7 +89,7 @@
   &__input::placeholder {
     @include createFont(null, 16px, 1.25, 0.03em);
 
-    @include createFlex($along: null);
+    // @include createFlex($along: null);
 
     color: rgba(255, 255, 255, 0.6);
   }
