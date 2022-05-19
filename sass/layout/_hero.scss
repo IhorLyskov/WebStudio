@@ -22,13 +22,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 1600px;
 
   &__title {
     margin-top: 0;
     margin-bottom: 30px;
 
-    @include createFont(900, 44px, 1.36, 0.06em);
+    @include createFont(900, 26px, 1.62, 0.06em);
+    @include desktop {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+
     text-transform: uppercase;
 
     color: $hero-title-color;

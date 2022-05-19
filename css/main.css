@@ -253,7 +253,6 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  max-width: 1600px;
 }
 @media screen and (min-width: 768px) {
   .hero {
@@ -273,11 +272,17 @@ img {
   margin-top: 0;
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .feature {
@@ -507,9 +512,19 @@ img {
   margin: 0 auto;
   background-color: #2f303a;
 }
+@media screen and (max-width: 767px) {
+  .footer__data {
+    text-align: center;
+  }
+}
 .footer__left {
-  width: 231px;
-  margin-right: 70px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .footer__left {
+    width: 231px;
+    margin-right: 70px;
+  }
 }
 .footer__address {
   margin-top: 20px;
@@ -534,8 +549,10 @@ img {
 .footer__tel:hover, .footer__tel:focus {
   color: #2196f3;
 }
-.footer__middle {
-  margin-top: 12px;
+@media screen and (min-width: 768px) {
+  .footer__middle {
+    margin-top: 12px;
+  }
 }
 .footer__title {
   margin-top: 0;
@@ -552,7 +569,6 @@ img {
 }
 
 .mailing-form__input {
-  width: 358px;
   height: 50px;
   margin: 0 12px 0 0;
   padding: 15px 16px;
@@ -563,6 +579,11 @@ img {
   background-color: transparent;
   color: #ffffff;
   font: inherit;
+}
+@media screen and (min-width: 480px) {
+  .mailing-form__input {
+    width: 358px;
+  }
 }
 .mailing-form__input::-webkit-input-placeholder {
   font-size: 16px;
