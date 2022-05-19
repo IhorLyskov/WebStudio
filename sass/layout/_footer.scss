@@ -5,13 +5,13 @@
 
   background-color: $dark-bg-color;
 
-  &__data {
-    // @include createFlex(flex, space-between, null);
-  }
+  // &__data {
+  //   @include createFlex(flex, space-between, null);
+  // }
 
-  &__left-middle {
-    // @include createFlex(flex, null, null);
-  }
+  // &__left-middle {
+  //   @include createFlex(flex, null, null);
+  // }
 
   &__left {
     width: 231px;
