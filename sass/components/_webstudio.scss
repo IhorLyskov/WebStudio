@@ -1,6 +1,9 @@
 .webstudio {
   font-family: 'Raleway', Tahoma, sans-serif;
-  @include createFont(700, 26px, 1.19, 0.03em);
+  @include createFont(700, 24px, 1.16, 0.03em);
+  @include desktop {
+    @include createFont(null, 26px, 1.19, null);
+  }
   text-decoration: none;
 
   &--header {
