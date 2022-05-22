@@ -5,20 +5,34 @@
 
   background-color: $dark-bg-color;
   text-align: center;
+  @include desktop {
+    text-align: left;
+  }
 
-  // &__data {
-  //   @include createFlex(flex, space-between, null);
-  //   }
-  // }
+  &__data {
+    @include desktop {
+      @include createFlex(flex, space-between, null);
+    }
+  }
 
-  // &__left-middle {
-  //   @include createFlex(flex, null, null);
-  // }
+  &__left-middle {
+    @include tablet {
+      padding-left: 61px;
+      padding-right: 74px;
+      @include createFlex(flex, space-between, null);
+    }
+    @include desktop {
+      padding-left: 0;
+    }
+  }
 
   &__left {
+    @include createFont(null, 14px, 1.71, 0.03em);
     width: 100%;
     @include tablet {
-      width: 231px;
+      width: 232px;
+    }
+    @include desktop {
       margin-right: 70px;
     }
   }
@@ -26,8 +40,6 @@
   &__address {
     margin-top: 20px;
     margin-bottom: 0;
-
-    @include createFont(null, 14px, 1.71, 0.03em);
 
     font-style: normal;
     color: $footer-addr-color;
@@ -41,8 +53,6 @@
       margin-top: 9px;
     }
     display: block;
-
-    @include createFont(null, 14px, 1.71, 0.03em);
 
     font-style: normal;
     color: $footer-tel-color;
@@ -58,14 +68,15 @@
   &__middle {
     margin-top: 57px;
     @include tablet {
+      margin-top: 5px;
+    }
+    @include desktop {
       margin-top: 12px;
     }
   }
 
   &__title {
-    // @include tablet {
     margin-top: 0;
-    // }
     margin-bottom: 20px;
 
     @include createFont(null, 14px, 1.14, 0.03em);
@@ -77,18 +88,26 @@
 
   &__right {
     margin-top: 60px;
+    @include tablet {
+      margin-left: 151px;
+      margin-right: 137px;
+    }
+
     @include desktop {
       margin-top: 12px;
+      margin-left: 0;
+      margin-right: 0;
+      height: 86px;
     }
-    height: 86px;
   }
 }
 
 .mailing-form {
-  // @include createFlex($cross: flex-start);
-
+  @include desktop {
+    @include createFlex($cross: flex-start);
+  }
   &__input {
-    width: calc(100% - 15px);
+    width: 100%;
     @include tablet {
       width: 358px;
     }
