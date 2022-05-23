@@ -99,11 +99,7 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-}
-@media screen and (min-width: 480px) {
-  .container {
-    max-width: 480px;
-  }
+  max-width: 480px;
 }
 @media screen and (min-width: 768px) {
   .container {
@@ -759,6 +755,11 @@ img {
   visibility: visible;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 .backdrop.is-hidden {
@@ -777,7 +778,6 @@ img {
   top: 50%;
   left: 50%;
   min-width: 450px;
-  min-height: 581px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -788,6 +788,11 @@ img {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 480px) {
+  .modal {
+    min-width: calc(100% - 30px);
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -822,19 +827,27 @@ img {
 }
 .modal__caption {
   margin: 40px 40px 0 40px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
   text-align: center;
   color: #212121;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .modal__caption {
+    line-height: 1.15;
+  }
 }
 
 .modal-form {
-  width: 448px;
+  width: calc(100% - 80px);
   margin-top: 12px;
   margin-left: auto;
   margin-right: auto;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
 }
 .modal-form__field {
   position: relative;
@@ -844,7 +857,6 @@ img {
   margin-bottom: 4px;
   font-size: 12px;
   line-height: 1.16;
-  letter-spacing: 0.01em;
   color: val(--main-color);
 }
 .modal-form__input-and-icon {
@@ -857,7 +869,6 @@ img {
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  font: inherit;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -883,7 +894,6 @@ img {
   margin: 0;
   padding: 12px 16px;
   height: 120px;
-  font: inherit;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -891,33 +901,18 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form .modal-form-field textarea::-webkit-input-placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-form .modal-form-field textarea::-moz-placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-form .modal-form-field textarea:-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-form .modal-form-field textarea::-ms-input-placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 .modal-form .modal-form-field textarea::placeholder {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
@@ -946,14 +941,19 @@ img {
 }
 .agreement__icon {
   position: relative;
-  width: 16px;
+  min-width: 16px;
   height: 15px;
-  margin-left: 13px;
-  margin-right: 7px;
+  margin-left: 0;
+  margin-right: 8px;
   border: 2px solid #212121;
   border-radius: 2px;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .agreement__icon {
+    margin-left: 13px;
+  }
 }
 .agreement__svg {
   position: absolute;
@@ -974,10 +974,16 @@ img {
   opacity: 1;
 }
 .agreement__label {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .agreement__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .agreement__link {
   color: #2196f3;
@@ -986,5 +992,7 @@ img {
 
 .btn--margin {
   margin-top: 30px;
-  margin-left: 123px;
+  margin-left: calc(50% - 100px);
+  margin-bottom: 40px;
+  min-width: 200px;
 }/*# sourceMappingURL=main.css.map */

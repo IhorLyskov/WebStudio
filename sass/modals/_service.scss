@@ -7,6 +7,11 @@
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
   transition: opacity $time $function, visibility $time $function;
+  overflow-y: scroll;
+}
+
+.modal-open {
+  overflow: hidden;
 }
 
 .backdrop.is-hidden {
@@ -25,10 +30,14 @@
   left: 50%;
 
   min-width: 450px;
+
+  @include mobile-only {
+    min-width: calc(100% - 30px);
+  }
   @include desktop {
     min-width: 528px;
   }
-  min-height: 581px;
+  // min-height: 609px;
   background-color: $modal-color;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -47,9 +56,8 @@
     background-color: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include createFlex();
+
     fill: $ico-close-color;
     background-color: transparent;
     transition: fill $time $function;
@@ -66,18 +74,22 @@
 
   &__caption {
     margin: 40px 40px 0 40px;
-    @include createFont(700, 20px, 1.15, 0.03em);
     text-align: center;
     color: $title-color;
+    @include createFont(700, 20px, 1.5, 0.03em);
+    @include desktop {
+      line-height: 1.15;
+    }
   }
 }
 
 .modal-form {
-  width: calc(100%-60px);
-  // 448px;
+  width: calc(100% - 80px);
   margin-top: 12px;
   margin-left: auto;
   margin-right: auto;
+
+  @include createFont(null, 14px, 1.14, 0.01em);
 
   &__field {
     position: relative;
@@ -86,9 +98,9 @@
 
   &__label {
     margin-bottom: 4px;
+
     font-size: 12px;
     line-height: 1.16;
-    letter-spacing: 0.01em;
 
     color: val(--main-color);
   }
@@ -107,7 +119,6 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    font: inherit;
     transition: border-color $time $function;
   }
 
@@ -137,8 +148,6 @@
     padding: 12px 16px;
     height: 120px;
 
-    font: inherit;
-
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
@@ -147,10 +156,6 @@
   }
 
   .modal-form-field textarea::placeholder {
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
-
     color: rgba(117, 117, 117, 0.5);
   }
 }
@@ -177,11 +182,14 @@
 
   &__icon {
     position: relative;
-    width: 16px;
+    min-width: 16px;
     height: 15px;
 
-    margin-left: 13px;
-    margin-right: 7px;
+    margin-left: 0;
+    @include desktop {
+      margin-left: 13px;
+    }
+    margin-right: 8px;
 
     border: 2px solid $title-color;
     border-radius: 2px;
@@ -210,10 +218,11 @@
   }
 
   &__label {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-
+    @include createFont(null, 12px, 1.16, 0.03em);
+    @include desktop {
+      font-size: 14px;
+      line-height: 1.71;
+    }
     color: $main-color;
   }
 
@@ -225,5 +234,8 @@
 
 .btn--margin {
   margin-top: 30px;
-  margin-left: 123px;
+  margin-left: calc(50% - 100px);
+  // margin-left: 123px;
+  margin-bottom: 40px;
+  min-width: 200px;
 }
