@@ -5,7 +5,7 @@
 }
 
 .work {
-  @extend %list;
+  @include list();
 
   @include createFlex(flex, null, null, wrap);
 

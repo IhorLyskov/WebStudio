@@ -1,5 +1,5 @@
 .soc-list {
-  @extend %list;
+  @include list();
   @include createFlex();
 
   &__item + &__item {

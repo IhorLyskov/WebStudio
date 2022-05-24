@@ -1,5 +1,5 @@
 .feature {
-  @extend %list;
+  @include list();
 
   margin-bottom: -30px;
 
@@ -27,7 +27,6 @@
     margin-bottom: 10px;
 
     @include createFont(null, 14px, 1.14, 0.03em);
-    // @include createFont(null, 16px, 1.14, 0.03em);
 
     text-align: center;
     text-transform: uppercase;

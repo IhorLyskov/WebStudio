@@ -1,5 +1,5 @@
 .team-list {
-  @extend %list;
+  @include list();
 
   margin-bottom: -30px;
 
