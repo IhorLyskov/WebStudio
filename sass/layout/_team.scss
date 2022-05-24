@@ -31,20 +31,20 @@
   padding-top: 30px;
   padding-bottom: 30px;
   margin-top: 0px;
-  background-color: $team-card-color;
+  background-color: var(--team-card-color);
 
   &__title {
     margin-top: 0;
     margin-bottom: 10px;
 
-    @include createFont(500, 16px, 1.19, 0.03em);
+    @include createFont(500, 16px, calc(19 / 16), 0.03em);
 
     text-align: center;
-    color: $title-color;
+    color: var(--title-color);
   }
 
   &__text {
-    @include createFont(null, 16px, 1.19, 0.03em);
+    @include createFont(null, 16px, calc(19 / 16), 0.03em);
 
     margin-top: 0;
     margin-bottom: 16px;
@@ -54,5 +54,5 @@
 
 .section--team {
   padding-bottom: 94px;
-  background-color: $team-bg-color;
+  background-color: var(--team-bg-color);
 }

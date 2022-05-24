@@ -33,10 +33,10 @@
   }
 
   &__text {
-    @include createFont(null, 14px, 1.14, 0.03em);
+    @include createFont(null, 14px, calc(16 / 14), 0.03em);
 
     text-align: center;
     text-transform: uppercase;
-    color: $main-bg-color;
+    color: var(--main-bg-color);
   }
 }

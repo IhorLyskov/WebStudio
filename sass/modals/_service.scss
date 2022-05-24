@@ -6,7 +6,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
-  transition: opacity $time $function, visibility $time $function;
+  transition: opacity var(--time) var(--function), visibility var(--time) var(--function);
   overflow-y: scroll;
 }
 
@@ -34,13 +34,13 @@
     min-width: 528px;
   }
   // min-height: 609px;
-  background-color: $modal-color;
+  background-color: var(--modal-bg-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform $time $function;
+  transition: transform var(--time) var(--function);
 
   &__close-btn {
     position: absolute;
@@ -54,25 +54,25 @@
 
     @include createFlex();
 
-    fill: $ico-close-color;
+    fill: var(--ico-close-color);
     background-color: transparent;
-    transition: fill $time $function;
+    transition: fill var(--time) var(--function);
   }
 
   //  &__close-btn:focus {
-  //   border-color: $accent-color;
-  //   color: $accent-color;
+  //   border-color: var(--accent-color);
+  //   color: var(--accent-color);
   // }
 
   &__close-btn:hover {
-    fill: $accent-color;
+    fill: var(--accent-color);
   }
 
   &__caption {
     margin: 40px 40px 0 40px;
     text-align: center;
-    color: $title-color;
-    @include createFont(700, 20px, 1.5, 0.03em);
+    color: var(--title-color);
+    @include createFont(700, 20px, calc(30 / 20), 0.03em);
     @include desktop {
       line-height: 1.15;
     }
@@ -85,7 +85,7 @@
   margin-left: auto;
   margin-right: auto;
 
-  @include createFont(null, 14px, 1.14, 0.01em);
+  @include createFont(null, 14px, calc(16 / 14), 0.01em);
 
   &__field {
     position: relative;
@@ -115,7 +115,7 @@
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 
-    transition: border-color $time $function;
+    transition: border-color var(--time) var(--function);
   }
 
   &__icon {
@@ -125,17 +125,17 @@
     height: 18px;
 
     transform: translateY(-50%);
-    transition: fill $time $function;
+    transition: fill var(--time) var(--function);
   }
 
   &__comment:focus,
   &__input:focus {
     outline: none;
-    border-color: $accent-color;
+    border-color: var(--accent-color);
   }
 
   &__input:focus + &__icon {
-    fill: $accent-color;
+    fill: var(--accent-color);
   }
 
   &__comment {
@@ -148,7 +148,7 @@
     border-radius: 4px;
 
     resize: none;
-    transition: border-color $time $function;
+    transition: border-color var(--time) var(--function);
   }
 
   .modal-form-field textarea::placeholder {
@@ -187,26 +187,26 @@
     }
     margin-right: 8px;
 
-    border: 2px solid $title-color;
+    border: 2px solid var(--title-color);
     border-radius: 2px;
 
-    transition: border-color $time $function;
+    transition: border-color var(--time) var(--function);
   }
 
   &__svg {
     position: absolute;
     top: -3px;
     opacity: 0;
-    transition: opacity $time $function;
+    transition: opacity var(--time) var(--function);
   }
 
   &__checkbox:checked + &__icon {
-    border-color: $accent-color;
-    background-color: $accent-color;
+    border-color: var(--accent-color);
+    background-color: var(--accent-color);
   }
 
   &__checkbox:focus + &__icon {
-    box-shadow: 0 0 0 2px $modal-color, 0 0 0 3px $accent-color;
+    box-shadow: 0 0 0 2px var(--modal-bg-color), 0 0 0 3px var(--accent-color);
   }
 
   &__checkbox:checked + &__icon > &__svg {
@@ -214,17 +214,17 @@
   }
 
   &__label {
-    @include createFont(null, 12px, 1.16, 0.03em);
+    @include createFont(null, 12px, calc(14 / 12), 0.03em);
     @include desktop {
       font-size: 14px;
       line-height: 1.71;
     }
-    color: $main-color;
+    color: var(--main-color);
   }
 
   &__link {
-    color: $accent-color;
-    outline-color: $accent-color;
+    color: var(--accent-color);
+    outline-color: var(--accent-color);
   }
 }
 

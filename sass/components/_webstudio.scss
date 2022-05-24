@@ -1,8 +1,8 @@
 .webstudio {
   font-family: 'Raleway', Tahoma, sans-serif;
-  @include createFont(700, 24px, 1.16, 0.03em);
+  @include createFont(700, 24px, calc(28 / 24), 0.03em);
   @include desktop {
-    @include createFont(null, 26px, 1.19, null);
+    @include createFont(null, 26px, calc(31 / 26), null);
   }
   text-decoration: none;
 
@@ -10,18 +10,18 @@
     padding-top: 16px;
     padding-bottom: 16px;
     @include tablet {
-      padding-top: 24px;
-      padding-bottom: 25px;
+      padding-top: 26px;
+      padding-bottom: 26px;
     }
 
-    color: $webstudio-header-color;
+    color: var(--webstudio-header-color);
   }
 
   &--footer {
-    color: $webstudio-footer-color;
+    color: var(--webstudio-footer-color);
   }
 
   &__span {
-    color: $accent-color;
+    color: var(--accent-color);
   }
 }

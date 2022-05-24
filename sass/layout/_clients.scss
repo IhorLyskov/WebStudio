@@ -20,18 +20,18 @@
   }
 
   &__link {
-    transition: border $time $function, fill $time $function;
+    transition: border var(--time) var(--function), fill var(--time) var(--function);
 
     height: 92px;
-    border: 1px solid $logo-color;
+    border: 1px solid var(--logo-color);
     border-radius: 4px;
     @include createFlex();
     // padding: 16px 32px;
-    fill: $logo-color;
+    fill: var(--logo-color);
     &:hover,
     &:focus {
-      border: 1px solid $accent-color;
-      fill: $accent-color;
+      border: 1px solid var(--accent-color);
+      fill: var(--accent-color);
     }
   }
 }

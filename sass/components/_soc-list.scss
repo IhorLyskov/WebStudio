@@ -14,25 +14,25 @@
   }
 
   &__link--team {
-    transition: fill $time $function, background-color $time $function;
+    transition: fill var(--time) var(--function), background-color var(--time) var(--function);
 
-    background-color: $team-card-color;
-    fill: $logo-color;
+    background-color: var(--team-card-color);
+    fill: var(--logo-color);
     &:hover,
     &:focus {
-      background-color: $accent-color;
-      fill: $team-card-color;
+      background-color: var(--accent-color);
+      fill: var(--team-card-color);
     }
   }
 
   &__link--footer {
-    transition: background-color $time $function;
+    transition: background-color var(--time) var(--function);
 
-    background-color: $join-bg-color;
-    fill: $footer-addr-color;
+    background-color: var(--join-bg-color);
+    fill: var(--footer-addr-color);
     &:hover,
     &:focus {
-      background-color: $accent-color;
+      background-color: var(--accent-color);
     }
   }
 }

@@ -3,7 +3,7 @@
   padding-bottom: 60px;
   margin: 0 auto;
 
-  background-color: $dark-bg-color;
+  background-color: var(--dark-bg-color);
   text-align: center;
   @include desktop {
     text-align: left;
@@ -27,7 +27,7 @@
   }
 
   &__left {
-    @include createFont(null, 14px, 1.71, 0.03em);
+    @include createFont(null, 14px, calc(24 / 14), 0.03em);
     width: 100%;
     @include tablet {
       width: 232px;
@@ -42,11 +42,11 @@
     margin-bottom: 0;
 
     font-style: normal;
-    color: $footer-addr-color;
+    color: var(--footer-addr-color);
   }
 
   &__tel {
-    transition: color $time $function;
+    transition: color var(--time) var(--function);
 
     margin-top: 8px;
     @include tablet {
@@ -55,14 +55,14 @@
     display: block;
 
     font-style: normal;
-    color: $footer-tel-color;
+    color: var(--footer-tel-color);
 
     text-decoration: none;
   }
 
   &__tel:hover,
   &__tel:focus {
-    color: $accent-color;
+    color: var(--accent-color);
   }
 
   &__middle {
@@ -79,11 +79,11 @@
     margin-top: 0;
     margin-bottom: 20px;
 
-    @include createFont(null, 14px, 1.14, 0.03em);
+    @include createFont(null, 14px, calc(16 / 14), 0.03em);
 
     text-transform: uppercase;
 
-    color: $footer-addr-color;
+    color: var(--footer-addr-color);
   }
 
   &__right {
@@ -123,14 +123,12 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: transparent;
-    color: $btn-text-color;
+    color: var(--btn-text-color);
     font: inherit;
   }
 
   &__input::placeholder {
-    @include createFont(null, 16px, 1.25, 0.03em);
-
-    // @include createFlex($along: null);
+    @include createFont(null, 16px, calc(20 / 16), 0.03em);
 
     color: rgba(255, 255, 255, 0.6);
   }

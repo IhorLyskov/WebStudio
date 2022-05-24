@@ -26,22 +26,22 @@
     margin-top: 0px;
     margin-bottom: 10px;
 
-    @include createFont(null, 14px, 1.14, 0.03em);
+    @include createFont(null, 14px, calc(16 / 14), 0.03em);
 
     text-align: center;
     text-transform: uppercase;
-    color: $title-color;
+    color: var(--title-color);
   }
 
   &__text {
     margin-top: 0;
     margin-bottom: 0;
 
-    @include createFont(null, 14px, 1.71, 0.03em);
+    @include createFont(null, 14px, calc(24 / 14), 0.03em);
   }
 
   &__ico {
-    background-color: $team-bg-color;
+    background-color: var(--team-bg-color);
     border-radius: 4px;
     height: 120px;
     margin-top: 0px;

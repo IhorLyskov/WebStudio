@@ -11,8 +11,8 @@
   display: inline-block;
 
   font-family: inherit;
-  @include createFont(700, 16px, 1.88, 0.06em);
+  @include createFont(700, 16px, calc(30 / 16), 0.06em);
 
-  color: $btn-text-color;
-  background-color: $hero-bg-btn-color;
+  color: var(--btn-text-color);
+  background-color: var(--hero-bg-btn-color);
 }
