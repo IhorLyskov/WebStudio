@@ -59,9 +59,8 @@
     transition: fill var(--time) var(--function);
   }
 
-  //  &__close-btn:focus {
-  //   border-color: var(--accent-color);
-  //   color: var(--accent-color);
+  // &__close-btn:focus {
+  //   fill: var(--accent-color);
   // }
 
   &__close-btn:hover {

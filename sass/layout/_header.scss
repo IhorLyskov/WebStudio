@@ -68,7 +68,7 @@
   @include tablet {
     display: block;
     padding-top: 21px;
-    padding-bottom: 21px;
+    padding-bottom: 21px - 10px;
     margin-left: auto;
   }
 
