@@ -3,9 +3,16 @@
 
   &__title {
     margin-top: 0;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @include desktop {
+      margin-bottom: 50px;
+    }
 
-    @include createFont(null, 36px, calc(42 / 36), 0.03em);
+    @include createFont(null, 28px, calc(33 / 28), 0.03em);
+    @include tablet {
+      @include createFont(null, 36px, calc(42 / 36), null);
+    }
+
     text-align: center;
 
     color: var(--title-color);

@@ -35,8 +35,8 @@
         <div class="header__nav">
           <div class="header__webstudio">
             <a href="" class="webstudio webstudio--header"><span class="webstudio__span">Web</span>Studio</a>
-            <button type="button" class="header__open-btn">
-              <svg width="40" height="40">
+            <button type="button" aria-expanded="false" aria-controls="mob-menu" class="header__open-btn">
+              <svg width="40" height="40" aria-label="Переключатель мобильного меню">
                 <use href="./images/icons.svg#icon-open-menu"></use>
               </svg>
             </button>
@@ -62,7 +62,7 @@
           </div>
         </div>
       </div>
-      <div class="mob-menu is-hidden">
+      <div class="mob-menu is-hidden" id="mob-menu">
         <div class="container">
           <div class="mob-menu__top">
             <button type="button" class="mob-menu__close-btn">
