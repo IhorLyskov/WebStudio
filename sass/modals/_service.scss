@@ -25,10 +25,9 @@
   top: 50%;
   left: 50%;
 
-  width: 450px;
-
-  @include mobile-only {
-    width: calc(100% - 30px);
+  width: calc(100% - 30px);
+  @include tablet {
+    width: 450px;
   }
   @include desktop {
     width: 528px;
