@@ -1071,7 +1071,7 @@ img {
   visibility: visible;
   -webkit-transition: opacity var(--time) var(--function), visibility var(--time) var(--function);
   transition: opacity var(--time) var(--function), visibility var(--time) var(--function);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .backdrop.is-hidden {

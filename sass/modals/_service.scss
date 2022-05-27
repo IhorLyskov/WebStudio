@@ -7,7 +7,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   visibility: visible;
   transition: opacity var(--time) var(--function), visibility var(--time) var(--function);
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .backdrop.is-hidden {
@@ -25,10 +25,6 @@
   top: 50%;
   left: 50%;
 
-  // @media screen and (orientation: landscape) {
-  //   overflow-y: auto;
-  // }
-
   width: calc(100% - 30px);
   @include tablet {
     width: 450px;
@@ -44,6 +40,9 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--time) var(--function);
 
+  // @media screen and (orientation: landscape) {
+  //   overflow-y: auto;
+  // }
   &__close-btn {
     position: absolute;
     top: 8px;
