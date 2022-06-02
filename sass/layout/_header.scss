@@ -106,8 +106,14 @@
 
   &__ico {
     margin-right: 8px;
+    @include tablet {
+      width: 14px;
+      height: 10px;
+    }
     @include desktop {
       margin-right: 10px;
+      width: 16px;
+      height: 12px;
     }
   }
 }
